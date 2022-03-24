@@ -1,0 +1,307 @@
+// About me styles start
+.about__me {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    margin-bottom: 70px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        max-width: 970px;
+        min-height: 467px;
+        padding: 0 60px;
+
+        @media (max-width: $laptop) {
+            min-height: 345px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            padding: 20px;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: $min-mobile) {
+            min-height: unset;
+        }
+    }
+
+    &--body {
+        flex: 0 1 59%;
+
+        h1 {
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 123.6%;
+            color: $blue;
+
+            span {
+                color: $yellow;
+            }
+
+            @media (max-width: $laptop) {
+                font-size: 30px;
+                line-height: 120%;
+            }
+
+            @media (max-width: $min-mobile) {
+                font-size: 37px;
+            }
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: capitalize;
+            color: #767676;
+            margin: 18px 0 25px 0;
+
+            @media (max-width: $laptop) {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            width: 154px;
+            border-radius: 5px;
+            transition: .3s all;
+
+            @media (max-width: $laptop) {
+                font-size: 13px;
+                line-height: 17px;
+                width: 130px;
+            }
+
+            @media (max-width: $min-mobile) {
+                margin: 0 auto;
+                width: 180px;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            flex: unset;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $min-mobile) {
+            text-align: center;
+        }
+    }
+
+    &--img {
+        flex: 0 1 41%;
+        text-align: right;
+        align-self: end;
+
+        @media (max-width: $tablet) {
+            flex: unset;
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            @media (max-width: $tablet) {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: $min-mobile) {
+            display: none;
+        }
+    }
+
+    @keyframes home_anime {
+        0% {
+            opacity: 1;
+            bottom: -10%;
+            transform: translateX(20px) rotate(0deg);
+        }
+
+        20% {
+            opacity: 0.8;
+            transform: translateX(-20px) rotate(45deg);
+        }
+
+        40% {
+
+            transform: translateX(-20px) rotate(90deg);
+        }
+
+        60% {
+
+            transform: translateX(-20px) rotate(135deg);
+        }
+
+        80% {
+
+            transform: translateX(-20px) rotate(180deg);
+        }
+
+        100% {
+
+            bottom: 110%;
+            transform: translateX(-20px) rotate(225deg);
+        }
+    }
+
+    &__animation {
+        svg {
+            width: 20px;
+            position: absolute;
+            z-index: 1;
+
+            @media (max-width: $min-mobile) {
+                width: 15px;
+            }
+        }
+
+        & svg:nth-child(1) {
+            left: 5%;
+            animation: home_anime 10s linear infinite;
+            animation-delay: -2s;
+        }
+
+        & svg:nth-child(2) {
+            left: 25%;
+            animation: home_anime 10s linear infinite;
+            animation-delay: -4s;
+        }
+
+        & svg:nth-child(3) {
+            left: 45%;
+            animation: home_anime 15s linear infinite;
+            animation-delay: -7s;
+
+        }
+
+        & svg:nth-child(4) {
+            left: 60%;
+            animation: home_anime 13s linear infinite;
+            animation-delay: -5s;
+        }
+
+        & svg:nth-child(5) {
+            left: 75%;
+            animation: home_anime 10s linear infinite;
+            animation-delay: -5s;
+        }
+
+        & svg:nth-child(6) {
+            left: 85%;
+            animation: home_anime 12s linear infinite;
+            animation-delay: -10s;
+        }
+
+        & svg:nth-child(7) {
+            left: 97%;
+            animation: home_anime 12s linear infinite;
+            animation-delay: -10s;
+        }
+    }
+
+}
+
+// About me styles end
+
+// Reviews styles start
+.reviews__section {
+    padding-bottom: 30px;
+
+    &__container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    &--content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .swiper-wrapper {
+            margin-bottom: 50px;
+        }
+
+        .swiper-pagination-bullet {
+            background: $yellow;
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .review__box {
+        padding: 25px;
+        background: #FFFFFF;
+        margin-bottom: 27px;
+
+        &--body {
+            margin-bottom: 30px;
+
+            .review__starts {
+                margin-bottom: 18px;
+            }
+
+            .review__text {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 24px;
+                text-transform: capitalize;
+                font-feature-settings: 'calt'off, 'kern'off;
+                color: $gtc;
+                min-height: 90px;
+            }
+        }
+
+        &--footer {
+            display: flex;
+            align-items: center;
+
+            .reviewer__img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 13px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .reviewer__info {
+
+                h5 {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 123.6%;
+                    color: $black;
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                    font-feature-settings: 'calt'off, 'kern'off;
+                    color: $gtc;
+                }
+            }
+        }
+    }
+}
+
+// Reviews styles end

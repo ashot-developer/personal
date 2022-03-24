@@ -1,0 +1,240 @@
+// Importing fonts
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+// Importing reset file
+@import 'reset.scss';
+// Importing variables
+@import 'vars.scss';
+
+// Basic styles start
+
+body {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fs;
+    background: #F0F0F6;
+    color: $gtc;
+    scroll-behavior: smooth;
+}
+
+[class*="__container"] {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__main {
+        padding: 0 125px 0 297px;
+        width: 100%;
+
+        @media (max-width: $mobile) {
+            padding: 0 20px;
+        }
+    }
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 123.6%;
+    color: $black;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.progress__bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 8px;
+    padding: 2px;
+    border: 0.5px solid #FFB400;
+    border-radius: 30px;
+    line-height: 10px;
+}
+
+.progress__indicator {
+    background: #FFB400;
+    width: 0;
+    height: 3px;
+    border-radius: 30px;
+    transition: .3s all;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    background: $yellow;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    color: $black;
+
+    svg {
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+}
+
+.mt {
+
+    @media (max-width: $mobile) {
+        margin-top: 50px;
+    }
+}
+
+.mt__section {
+    margin-top: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffb803c2;
+    opacity: 0.1;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $yellow;
+    opacity: 1;
+}
+
+.sections__title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 123.6%;
+        text-transform: capitalize;
+        color: $blue;
+        margin-bottom: 25px;
+    }
+
+    p {
+        max-width: 438px;
+        width: 100%;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: capitalize;
+        font-feature-settings: 'calt'off, 'kern'off;
+        color: $gtc;
+
+    }
+}
+
+// Basic styles end
+
+// Header start
+.header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: rgb(47 122 249 / 10%) 4px 0px 10px;
+    z-index: 9;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 100%;
+    }
+
+    .burger__menu--left {
+        svg {
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+    }
+
+    .burger__menu--right {
+        svg {
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+    }
+
+    .bg_btn svg {
+        transform: rotate(200deg);
+    }
+
+    @media (max-width: $mobile) {
+        display: block;
+    }
+}
+
+.close__menu {
+    display: none;
+    width: fit-content;
+    position: absolute;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+        vertical-align: middle;
+    }
+
+    @media (max-width: $mobile) {
+        display: block;
+    }
+}
+
+// Header end
+
+// Footer start
+.footer {
+    min-height: 60px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// Footer end
+
+
+// Importing style files
+@import './main-blocks/left-sidebar.scss';
+@import './main-blocks/right-sidebar.scss';
+@import './pages/home.scss';
+@import './pages/services-page.scss';
+@import './pages/education-page.scss';

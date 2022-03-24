@@ -1,0 +1,275 @@
+%progress-label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left__sidebar {
+    position: relative;
+    flex: 0 1 305px;
+    height: 100vh;
+    background: #FFFFFF;
+    box-shadow: rgb(47 122 249 / 10%) 4px 0px 10px;
+    padding: 50px 30px 25px 30px;
+    transition: .5s all;
+    position: fixed;
+
+    &--box {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1.5px solid #F0F0F6;
+    }
+
+    &--head {
+        text-align: center;
+
+        .profile__img {
+            margin-bottom: 30px;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 123.6%;
+            color: #2B2B2B;
+            margin-bottom: 15px;
+        }
+
+        span {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            text-transform: capitalize;
+            font-feature-settings: 'calt'off, 'kern'off;
+            color: #767676;
+            margin-bottom: 15px;
+        }
+
+        .profile__social {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin-right: 15px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .3s all;
+
+                    &:hover svg {
+                        color: rgb(255, 255, 255);
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                    }
+
+                    svg {
+                        font-size: 12px;
+                        vertical-align: middle;
+                        color: #FFFFFF;
+                        transition: .3s all;
+                    }
+                }
+            }
+        }
+    }
+
+    &--info {
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                color: $black;
+                text-transform: capitalize;
+                font-feature-settings: 'calt'off, 'kern'off;
+
+                span {
+                    display: inline-block;
+                    min-height: 24px;
+                    line-height: 24px;
+                    padding: 0 8px 0 5px;
+                    background-color: $yellow;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: $mobile) {
+                    font-size: 12px;
+                }
+            }
+
+            li.available {
+                color: $available;
+
+                span {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    &--languages {
+
+        .profile__languages {
+            li {
+                margin-bottom: 16px;
+            }
+
+            &--info {
+                @extend %progress-label;
+            }
+        }
+
+    }
+
+    &--skills {
+
+        .profile__skills {
+            li {
+                margin-bottom: 16px;
+            }
+
+            &--info {
+                @extend %progress-label;
+            }
+        }
+
+    }
+
+    &--body {
+        padding-right: 10px;
+        height: calc(100vh - 485px);
+        overflow-y: auto;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 5px;
+
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #ffb803c2;
+            opacity: 0.1;
+            border-radius: 15px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $yellow;
+            opacity: 1;
+        }
+
+        @media (max-width: $mobile) {
+            height: calc(100vh - 460px);
+        }
+
+        @media (max-height: 548px) {
+            height: 100%;
+        }
+    }
+
+    &--extraSkills {
+        ul.extra__skills {
+            li {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 15px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 24px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    background-image: url('../../img/profile/icon.svg');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &--footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        text-align: center;
+        padding: 25px 0 25px 0;
+
+        @media (max-height: 548px) {
+            padding: 0;
+        }
+    }
+
+    .close__menu {
+        right: 10px;
+        top: 10px;
+    }
+
+    @media (max-width: $mobile) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        padding: 30px 30px 25px 30px;
+        margin-top: 0;
+        z-index: 99;
+
+        &.open {
+            left: 0;
+        }
+    }
+
+    @media (max-height: 548px) {
+        overflow-y: scroll;
+    }
+
+    @media (max-width: $min-mobile) {
+        padding: 30px 20px 25px 20px;
+        max-width: 305px;
+        width: 100%;
+    }
+}
