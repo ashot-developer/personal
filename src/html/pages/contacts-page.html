@@ -1,0 +1,80 @@
+<section class="contacts mt__section">
+    <div class="contacts__container">
+        <div class="contacts__content">
+            <div class="contacts__form">
+                @@include('./inc/page-title.html', {
+                "page-title": "Leave us your info",
+                "page-desc": ""
+                })
+                <div class="contacts__form--content">
+                    <form action="">
+                        <label for="">
+                            Your Full Name (Required) <br>
+                            <input type="text" required>
+                        </label>
+                        <label for="">
+                            Your Email (Required) <br>
+                            <input type="email" required>
+                        </label>
+                        <label for="">
+                            Subject <br>
+                            <input type="text">
+                        </label>
+                        <label for="">
+                            Your Message <br>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </label>
+                        <button type="submit" class="btn">send message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contacts__info">
+                @@include('./inc/page-title.html', {
+                "page-title": "Contact information",
+                "page-desc": ""
+                })
+                <div class="contacts__info--box">
+                    <div class="contacts__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.5 2.75L5.75 0.5L10.25 2.75L14.9772 0.72425C15.0343 0.699788 15.0966 0.689877 15.1584 0.695407C15.2202 0.700937 15.2797 0.721735 15.3316 0.755934C15.3834 0.790133 15.4259 0.836663 15.4553 0.891348C15.4847 0.946034 15.5001 1.00716 15.5 1.06925V13.25L10.25 15.5L5.75 13.25L1.02275 15.2758C0.965685 15.3002 0.90344 15.3101 0.841599 15.3046C0.779759 15.2991 0.720259 15.2783 0.66844 15.2441C0.616621 15.2099 0.574104 15.1633 0.544705 15.1087C0.515306 15.054 0.499945 14.9928 0.5 14.9307V2.75ZM10.25 13.823V4.382L10.2013 4.403L5.75 2.177V11.618L5.79875 11.597L10.25 13.823Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                    </div>
+                    <ul class="contacts__list">
+                        <li><span>Country:</span> Armenia</li>
+                        <li><span>City:</span> Armavir</li>
+                        <li><span>Streat:</span>12 str., 15 apt.</li>
+                    </ul>
+                </div>
+                <div class="contacts__info--box">
+                    <div class="contacts__icon">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.25 0.25H14.75C14.9489 0.25 15.1397 0.329018 15.2803 0.46967C15.421 0.610322 15.5 0.801088 15.5 1V13C15.5 13.1989 15.421 13.3897 15.2803 13.5303C15.1397 13.671 14.9489 13.75 14.75 13.75H1.25C1.05109 13.75 0.860322 13.671 0.71967 13.5303C0.579018 13.3897 0.5 13.1989 0.5 13V1C0.5 0.801088 0.579018 0.610322 0.71967 0.46967C0.860322 0.329018 1.05109 0.25 1.25 0.25ZM8.045 6.76225L3.236 2.6785L2.26475 3.8215L8.05475 8.73775L13.7405 3.81775L12.7595 2.683L8.04575 6.76225H8.045Z" fill="#2B2B2B"/>
+                        </svg>                            
+                    </div>
+                    <ul class="contacts__list">
+                        <li><span>Email:</span> marksyans.ashot@gmail.com</li>
+                        <li><span>Skype:</span> markosyan</li>
+                        <li><span>Telegram:</span>@markosyan</li>
+                    </ul>
+                </div>
+                <div class="contacts__info--box">
+                    <div class="contacts__icon">
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.25 0.25H14.75C14.9489 0.25 15.1397 0.329018 15.2803 0.46967C15.421 0.610322 15.5 0.801088 15.5 1V13C15.5 13.1989 15.421 13.3897 15.2803 13.5303C15.1397 13.671 14.9489 13.75 14.75 13.75H1.25C1.05109 13.75 0.860322 13.671 0.71967 13.5303C0.579018 13.3897 0.5 13.1989 0.5 13V1C0.5 0.801088 0.579018 0.610322 0.71967 0.46967C0.860322 0.329018 1.05109 0.25 1.25 0.25ZM8.045 6.76225L3.236 2.6785L2.26475 3.8215L8.05475 8.73775L13.7405 3.81775L12.7595 2.683L8.04575 6.76225H8.045Z" fill="#2B2B2B"/>
+                        </svg>                            
+                    </div>
+                    <ul class="contacts__list">
+                        <li><span>Support services:</span> +37477424845</li>
+                        <li><span>Office:</span> +37477424845</li>
+                        <li><span>Personal:</span> +37477424845</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contacts__map">
+            <img src="@img/contacts/map.png" alt="Mrgashat in map">
+        </div>
+    </div>
+</section>
