@@ -13,7 +13,7 @@
         @media (max-width: 1070px) {
             text-align: center;
         }
-        
+
     }
 
     &__content {
@@ -53,8 +53,8 @@
 
                 input {
                     height: 40px;
-                    padding-top: 0!important;
-                    padding-bottom: 0!important;
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
                 }
 
                 textarea {
@@ -62,7 +62,8 @@
                     min-height: 150px;
                 }
 
-                input, textarea {
+                input,
+                textarea {
                     width: 100%;
                     border: none;
                     margin-top: 10px;
@@ -117,8 +118,8 @@
                     align-items: center;
                     justify-content: space-between;
                     text-transform: capitalize;
-                    font-feature-settings: 'calt' off, 'kern' off;
-                    
+                    font-feature-settings: 'calt'off, 'kern'off;
+
 
                     span {
                         font-weight: 500;
