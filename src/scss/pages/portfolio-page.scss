@@ -1,0 +1,63 @@
+.portfolio {
+    margin-bottom: 60px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__box {
+        flex: 0 1 31.9%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 27px;
+
+        img {
+            width: 100%;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFFFFF;
+            opacity: 0;
+            transition: .4s all;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            background: $yellow;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            transition: .4s all;
+            opacity: 1;
+        }
+
+        &:hover {
+            &::before {
+                bottom: 0%;
+            }
+
+            svg {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            flex: 0 1 calc(50% - 10px);
+        }
+
+        @media (max-width: $min-mobile) {
+            flex: 0 1 100%;
+        }
+    }
+}

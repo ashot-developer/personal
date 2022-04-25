@@ -1,5 +1,4 @@
 .education {
-
     &__content {
         background: #FFFFFF;
         padding: 47px 29px 38px 37px;
@@ -23,7 +22,7 @@
         }
     }
 
-    &__box {
+    .eduwork__box {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -36,18 +35,17 @@
             border: 0;
             padding-bottom: 0;
         }
-        
+
         &--head {
             flex: 0 1 210px;
             margin-right: 20px;
 
-            .education__date {
+            .eduwork__date {
                 span:first-child {
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 24px;
                     text-transform: capitalize;
-                    font-feature-settings: 'calt' off, 'kern' off;
                     color: $black;
                     vertical-align: middle;
                 }
@@ -101,7 +99,6 @@
                 font-size: 15px;
                 line-height: 24px;
                 text-transform: capitalize;
-                font-feature-settings: 'calt' off, 'kern' off;
                 color: $gtc;
             }
 
