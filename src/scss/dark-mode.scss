@@ -17,7 +17,8 @@ body.dark-mode {
   .education__content,
   .contacts__form--content,
   .contacts__info--box,
-  .service__box {
+  .service__box, 
+  header {
     background: $darkContent;
     transition: 600ms ease-in-out;
   }
