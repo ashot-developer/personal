@@ -21,8 +21,11 @@
         height: 100%;
 
         .bg_btn {
+            cursor: pointer;
             svg {
                 vertical-align: middle;
+                pointer-events: none;
+                color: #1B1B1B;
             }
 
             @media (max-width: $mobile) {
