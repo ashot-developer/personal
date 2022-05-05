@@ -13,10 +13,12 @@ body.dark-mode {
   .reviews__section .review__box,
   .about__me,
   .left__sidebar--footer,
-  [class*="__box"],
+  [class*="__box "],
   .education__content,
   .contacts__form--content,
-  .contacts__info--box {
+  .contacts__info--box,
+  .service__box, 
+  header {
     background: $darkContent;
     transition: 600ms ease-in-out;
   }
@@ -24,6 +26,7 @@ body.dark-mode {
   .bg_btn {
     svg {
       color: #fff;
+      transition: 600ms ease-in-out;
     }
   }
 
@@ -39,6 +42,7 @@ body.dark-mode {
   .btn svg,
   .contacts__list li {
     color: #fff;
+    transition: 600ms ease-in-out;
   }
 
   p,
@@ -46,11 +50,13 @@ body.dark-mode {
   .profile__position,
   .contacts__form--content form label {
     color: rgb(228, 230, 235) !important;
+    transition: 600ms ease-in-out;
   }
 
   .contacts__form--content form input,
   .contacts__form--content form textarea {
     color: rgb(228, 230, 235);
     background: rgb(58, 59, 60);
+    transition: 600ms ease-in-out;
   }
 }
