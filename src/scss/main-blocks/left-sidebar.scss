@@ -238,6 +238,7 @@
         background-color: #FFFFFF;
         text-align: center;
         padding: 25px 0 25px 0;
+        transition: 600ms all;
 
         @media (max-height: 548px) {
             padding: 0;

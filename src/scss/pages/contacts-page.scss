@@ -34,6 +34,7 @@
         &--content {
             padding: 25px;
             background: #FFFFFF;
+            transition: 600ms all;
 
             form {
                 label {
@@ -55,11 +56,13 @@
                     height: 40px;
                     padding-top: 0 !important;
                     padding-bottom: 0 !important;
+                    transition: 600ms all;
                 }
 
                 textarea {
                     resize: none;
                     min-height: 150px;
+                    transition: 600ms all;
                 }
 
                 input,
@@ -89,6 +92,7 @@
             margin-bottom: 18px;
             background: #FFFFFF;
             padding: 25px 25px 15px 25px;
+            transition: 600ms all;
 
             &:last-child {
                 margin-bottom: 0;

@@ -16,6 +16,7 @@ body {
     background: #F0F0F6;
     color: $gtc;
     scroll-behavior: smooth;
+    transition: 600ms all;
 }
 
 [class*="__container"] {
@@ -227,6 +228,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 600ms all;
 }
 // Footer end
 

@@ -4,6 +4,7 @@
     overflow: hidden;
     background: #FFFFFF;
     margin-bottom: 70px;
+    transition: 600ms all;
 
     &__container {
         display: flex;
@@ -246,7 +247,8 @@
         padding: 25px;
         background: #FFFFFF;
         margin-bottom: 27px;
-
+        transition: 600ms all;
+        
         &--body {
             margin-bottom: 30px;
 
